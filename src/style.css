@@ -1,0 +1,68 @@
+@CHARSET "UTF-8";
+
+.progress {
+  background-color: #ddd;
+  margin-top: 0px !important;
+}
+.btn-block+.btn-block {
+  margin-top: 0px !important;
+}
+.m-b-10 {
+  margin-bottom: 10px;
+}
+.ad-primary {
+  background-color: #fff;
+  border-color: #1c84c6;
+  color: #1c84c6;  
+}
+.ad-primary:hover {
+  background-color: #367fa9;
+  transition: all .5s;
+}
+.ad-danger {
+  background-color: #fff;
+  border-color: #ed5565;
+  color: #ed5565;
+}
+.ad-danger:hover {
+  background-color: #dd4b39;
+  transition: all .5s
+}
+.ad-info {
+  background-color: #fff;
+  border-color: #21b9bb;
+  color: #21b9bb;
+}
+.ad-info:hover {
+  background-color: #269abc;
+  transition: all .5s
+}
+.ad-default {
+  background-color: #fff;
+  border-color: #a4a4a5;
+  color: inherit;
+}
+.ad-default:hover {
+  background-color: #ccc;
+  transition: all .5s
+}
+
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.pull-center {
+  float: center;
+}
+
+.m-r-5 {
+  margin-right: 5px;
+}
+.m-r-10 {
+  margin-right: 5px;
+}
+.disabled {
+  opacity: 0.25 !important;
+}
