@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Dashboard</title>
+  <title>CS | cofirm report template</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="src/bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -21,6 +21,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" href="src/dist/css/skins/skin-blue.min.css">
+  <link rel="stylesheet" href="src/style.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -260,7 +261,7 @@ desired effect
         <!-- Optionally, you can add icons to the links -->
         <li class=""><a href="report_card.html"><i class="fa fa-fw fa-bar-chart-o"></i> <span>成績</span></a></li>
         <li class=""><a href="communication.html"><i class="fa fa-fw fa-commenting-o"></i> <span>お便り、先生に一言</span></a></li>
-        <li class=""><a href="report_template_list.html"><i class="fa fa-fw fa-file-text-o"></i> <span>報告書作成</span></a></li>
+        <li class="active"><a href="report_template_list.html"><i class="fa fa-fw fa-file-text-o"></i> <span>報告書</span></a></li>
         <li class=""><a href="knowledge_sharing.html"><i class="fa fa-fw fa-graduation-cap"></i> <span>ナレッジ共有</span></a></li>
         <li class=""><a href="post_box.html"><i class="fa fa-fw fa-anchor"></i> <span>投稿ボックス</span></a></li>
         <li class=""><a href="student_list.html"><i class="fa fa-fw fa-users"></i> <span>学生管理</span></a></li>
@@ -278,22 +279,54 @@ desired effect
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        Page Header
-        <small>Optional description</small>
+      <h1 class="content-title">
+        報告書テンプレート作成
+        <small>入力内容の確認画面です</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> TOP</a></li>
+        <li class="">報告書一覧</li>
+        <li class="active">新規作成・編集</li>
       </ol>
     </section>
 
     <!-- Main content -->
     <section class="content container-fluid">
 
-      <!--------------------------
-        | Your Page Content Here |
-        -------------------------->
+      <div id="create_report_template" class="col-lg-12">
+        <div class="row">
+           <!-- left column -->
+           <div class="col-md-12">
+             <!-- general form elements -->
+             <div class="box box-primary">
+               <!-- /.box-header -->
+               <!-- form start -->
+               <!-- <form role="form" action="report_template_list.html"> -->
+                 <div class="box-body">
+                   <div class="form-group m-b">
+                     <label for="temp_name">報告書名</label>
+                     <input type="text" class="form-control" id="temp_name" name="temp_name" placeholder="報告書名を入力してください" value="進路指導報告書" disabled>
+                   </div>
+                   <div class="form-group">
+                     <label for="report_content">報告書文言</label>
+                     <textarea id="report_content" name="report_content" rows="10" cols="80" disabled>
+                      <h3><b>進路指導報告書</b></h3>
+                      <p>[ここに文章を入力]</p>
+                      <p>よろしくお願いいたします。</p>
+                     </textarea>
+                   </div>
+                   <div>
+                     <button type="submit" class="confirm-report btn btn-primary ad-primary pull-left m-r-10"><i class="fa fa-fw fa-plus-circle"></i> 登録</button>
+                     <button type="submit" class="prev-page btn btn-default ad-default prev-page pull-left m-r-10"><i class="fa fa-fw fa-arrow-circle-left"></i> 戻る</button>
+                   </div>
+                 </div>
+                 <!-- /.box-body -->
+               <!-- </form> -->
+             </div>
+             <!-- /.box -->
+           </div>
+         </div>
+      </div>
 
     </section>
     <!-- /.content -->
@@ -328,8 +361,7 @@ desired effect
               <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
               <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>SS
                 <p>Will be 23 on April 24th</p>
               </div>
             </a>
@@ -397,9 +429,20 @@ desired effect
 <script src="src/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="src/dist/js/adminlte.min.js"></script>
-
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-     Both of these plugins are recommended to enhance the
-     user experience. -->
+<!-- CK Editor -->
+<script src="src/bower_components/ckeditor/ckeditor.js"></script>
+<script>
+<!--
+$(function () {
+  CKEDITOR.replace('report_content', {readOnly: true});
+})
+$(".confirm-report").on("click", function(){
+  location.href = "report_template_list.html";
+});
+$(".prev-page").on("click", function() {
+  location.href = "create_report_template.html";
+});
+//-->
+</script>
 </body>
 </html>
