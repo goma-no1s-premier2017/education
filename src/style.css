@@ -66,3 +66,39 @@
 .disabled {
   opacity: 0.25 !important;
 }
+
+div .menue{
+    width: 80%;
+    padding-left: 100px;
+}
+div .topic, .schedule, .contribution{
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #ff6c03
+}
+div .topic, .schedule, .contribution{
+    padding-bottom:10px;
+}
+div .topic p, .schedule p, .contribution p{
+    position: absolute;
+    display: inline-block;
+    top: -27px;
+    left: -3px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    font-size: 17px;
+    background: #ff6c03;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+div .topic table, .schedule table, .contribution table {
+    margin: 0; 
+    padding: 0;
+}
+div td {
+   padding : 5px;
+}
